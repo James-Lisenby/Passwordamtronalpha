@@ -12,3 +12,12 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+var letterssmall = 'abcdefghijklmnopqrstuvwxyz' .split('');
+console.log(letterssmall);
+
+var lettersbig = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' .split('');
+console.log(lettersbig);
+
+
