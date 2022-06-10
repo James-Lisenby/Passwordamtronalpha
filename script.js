@@ -20,4 +20,10 @@ console.log(letterssmall);
 var lettersbig = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' .split('');
 console.log(lettersbig);
 
+var numbers = '123456789' .split('');
+console.log(numbers);
+
+var special = '©$¢‰@÷ƒ#‘❝≈~Ω' .split('');
+console.log(special);
+
 
