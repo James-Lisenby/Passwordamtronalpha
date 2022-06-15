@@ -1,18 +1,19 @@
 function generatePassword() {
-
+  // Big daddy function. Starts the chain. 
   var letterssmall = 'abcdefghijklmnopqrstuvwxyz' .split('');
   var lettersbig = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' .split('');
   var numbers = '123456789' .split('');
   var special = '!@#$%^&*()_+' .split('');
   var characterchoices = [];
+  // Character variables
 
   passwordlength = prompt("Enter desired lenght of password between 8-128.");
   if (passwordlength < 8 || passwordlength > 128) {
     return;
   } else {
-      alert("Your password will be " + passwordlength );
+      alert("Your password will be " + passwordlength  + "characters long" );
   }
-  
+    // Getting passwords total length.
   haslettersbig = confirm("Would you like to use uppercase letters?");
     if(haslettersbig) {
       var uselettersbig = alert("Uppercase letters confirmed.");
@@ -31,7 +32,7 @@ function generatePassword() {
 
   hasnumbers = confirm("Would you like to use numbers?");
       if(hasnumbers) {
-        var hasnumbers = alert("Numbers confirmed.");
+        var usenumbers = alert("Numbers confirmed.");
       }
       else {
         alert("Numbers declined.");
@@ -39,16 +40,18 @@ function generatePassword() {
 
   hasspecial = confirm("Would you like to use special characters?")
       if(hasspecial) {
-        var hasspecial = alert("Special characters confirmed.");
+        var usespecial = alert("Special characters confirmed.");
       }
       else {
         alert("Special characters declined.");
       }
-  
+        // Prompts for character selections.
+
+
       if (haslettersbig === false && hasletterssmall === false && hasnumbers === false && hasspecial === false) {
         return "please select at least one character type!";
       };
-
+        // If all charcter types are declined, return message is sent. 
       if (haslettersbig) {
         characterchoices = characterchoices.concat(lettersbig);
       }
@@ -61,7 +64,7 @@ function generatePassword() {
       if (hasspecial) {
         characterchoices = characterchoices.concat(hasspecial);
       }
-
+        // The code above combines the selected characters into the "character choice array".
 
       let createdpassword = ""
       for (let i = 0; i < passwordlength; i++) {
@@ -70,14 +73,20 @@ function generatePassword() {
       }
       return createdpassword;
         }    ;
-
+        // Selects the randomized password character from selected arrays and combines into the final password.
 
     var generateBtn = document.querySelector("#generate");
+      //Button Id selector.
+
 
     function writepassword() {
       var password = generatePassword();
       var passwordText = document.querySelector("#password");
       passwordText.value = password;
     }
+     // The actual code to write the password to the text box.
+
 
     generateBtn.addEventListener("click", writepassword);
+      // Even lisenter - click.
+
