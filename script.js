@@ -38,7 +38,7 @@ function generatePassword() {
         alert("Numbers declined.");
       }    
 
-  hasspecial = confirm("Would you like to use special characters?")
+  hasspecial = confirm("Would you like to use special characters?");
       if(hasspecial) {
         var usespecial = alert("Special characters confirmed.");
       }
@@ -59,10 +59,10 @@ function generatePassword() {
         characterchoices = characterchoices.concat(letterssmall);
       }
       if (hasnumbers) {
-        characterchoices =characterchoices.concat(hasnumbers);
+        characterchoices =characterchoices.concat(numbers);
       }
       if (hasspecial) {
-        characterchoices = characterchoices.concat(hasspecial);
+        characterchoices = characterchoices.concat(special);
       }
         // The code above combines the selected characters into the "character choice array".
 
